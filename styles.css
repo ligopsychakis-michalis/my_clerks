@@ -28,24 +28,28 @@ header {
 
 #cards {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 80px;
 }
 
 .card {
     margin: 0 20px 40px 20px;
-    border: #344bbf solid 1px;
+    border: #344bbf solid 0.5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px 15px 0 15px;
     width: 300px;
+    border-radius: 12px;
+    box-shadow: 8px 8px #344bbf24;
 }
 
 .card img { 
     border-radius: 100%;
-
+    box-shadow: 6px 6px #344bbf24;
 }
 
 .card ul { 
