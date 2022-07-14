@@ -2,6 +2,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
 header {
@@ -67,4 +68,84 @@ header {
 
 .card li::-webkit-scrollbar {
     display: none;
+}
+
+#scroll-to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: #344bbf50;
+    border-radius: 100%;
+    right: 20px;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+
+/* loader */
+@keyframes dot-keyframes {
+    0% {
+      opacity: .4;
+      transform: scale(1, 1);
+    }
+  
+    50% {
+      opacity: 1;
+      transform: scale(1.2, 1.2);
+    }
+  
+    100% {
+      opacity: .4;
+      transform: scale(1, 1);
+    }
+}
+  
+#loader {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.loading-dot {
+    animation: dot-keyframes 1.5s infinite ease-in-out;
+    background-color: #344bbf;
+    border-radius: 10px;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+.loading-dot:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.loading-dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* media queries */
+@media screen and (max-width: 400px) {
+    .card {
+        width: 180px;
+    }
+
+    .card li { 
+        max-width: 160px;
+    }
+
+    .color-picker-container {
+        flex-direction: column;
+    }
+    
+    .color-picker-container input {
+        margin-left: 0;
+        margin-top: 16px;
+    }
 }
